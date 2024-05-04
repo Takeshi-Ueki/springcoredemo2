@@ -12,8 +12,12 @@ public class DemoController {
     private Coach myCoach;
 
     // コンストラクターインジェクション
+//    @Autowired
+//    public DemoController(@Qualifier("cricketCoach") Coach theCoach) {
+//        myCoach = theCoach;
+//    }
     @Autowired
-    public DemoController(@Qualifier("cricketCoach") Coach theCoach) {
+    public DemoController(Coach theCoach) {
         myCoach = theCoach;
     }
 
