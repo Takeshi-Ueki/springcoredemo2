@@ -12,12 +12,9 @@ public class DemoController {
     private Coach myCoach;
 
     // コンストラクターインジェクション
-//    @Autowired
-//    public DemoController(@Qualifier("cricketCoach") Coach theCoach) {
-//        myCoach = theCoach;
-//    }
     @Autowired
-    public DemoController(Coach theCoach) {
+    public DemoController(@Qualifier("cricketCoach") Coach theCoach) {
+        System.out.println("In constructor: " + getClass().getSimpleName());
         myCoach = theCoach;
     }
 
